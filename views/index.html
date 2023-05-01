@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css" /> -->
+  <link rel="stylesheet" href="css/style.css">
+  <title>SMSify-by Durgesh</title>
+</head>
+
+<body>
+  <div class="container">
+    <h2>Send Text Message</h2>
+    <form action="#">
+      <div class="row">
+        <input type="tel" name="number" id="number" placeholder="Enter Phone Number...">
+      </div>
+      <div class="row">
+        <input type="text" name="msg" id="msg" placeholder="Enter Text Message...">
+      </div>
+      <div class="row">
+        <select name="schedule" id="schedule">
+          <option value="0">Schedule time to send a message</option>
+          <option value="1">After 1 minutes</option>
+          <option value="3">After 3 minutes</option>
+          <option value="5">After 5 minutes</option>
+        </select>
+      </div>
+      <input type="button" id="button" value="Send Text" class="button button-primary">
+    </form>
+    <p class="response"></p>
+  </div>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="javascript/massage.js"></script>
+</body>
+
+</html>
